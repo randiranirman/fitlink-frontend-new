@@ -34,9 +34,9 @@ export const loginUser = async (requestBody) => {
       const claims = jwtDecodeClaims(token);
 
       if (claims?.role === "CLIENT") {
-        router.push("../roles/Client/clientScreens/clientDashboard");
+        router.push("../roles/client/clientScreens/clientDashboard");
       } else if (claims?.role === "TRAINER") {
-        router.push("../roles/Trainer/trainerScreens/trainerDashboard");
+        router.push("../roles/trainer/trainerScreens/trainerDashboard");
       } 
     }
 
@@ -59,9 +59,9 @@ export const registerUser = async (requestBody) => {
       const claims = jwtDecodeClaims(token);
 
       if (claims?.role === "CLIENT") {
-        router.push("../roles/Client/clientScreens/clientDashboard");
+        router.push("../roles/client/clientScreens/clientDashboard");
       } else if (claims?.role === "TRAINER") {
-        router.push("../roles/Trainer/trainerScreens/trainerDashboard");
+        router.push("../roles/trainer/trainerScreens/trainerDashboard");
       } else if (claims?.role === "ADMIN") {
         router.push("../roles/Admin/adminScreens/adminDashboard");
       }
